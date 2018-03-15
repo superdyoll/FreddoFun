@@ -26,6 +26,9 @@
                 z-index: 100;
                 position: absolute;
             }
+			a {
+			    z-index: 150;
+			}
         </style>
     </head>
     <body>
@@ -35,6 +38,8 @@
                 <div class="col text-center align-center">
                     <h2>Amount Jake has to spend on freddos</h2>
                     <p>Assuming the price of a freddo is 30p</p>
+					<p>Want more freddos?</p>
+					<a href="https://southamptonsummer.ssago.org/" class="btn btn-success">Fill in the form now!</a>
                     <h1 id="money">&pound;<?=$pounds?></h1>
                 </div>
             </div>
