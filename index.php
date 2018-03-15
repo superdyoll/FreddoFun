@@ -3,9 +3,11 @@
     $page = file_get_contents('https://southamptonsummer.ssago.org/');
     $doc = new DOMDocument();
     $doc->loadHTML($page);
-    $club_tag = $doc->getElementsByTagName('h3')->item(0)->nodeValue;
-    preg_match('/\((\d+)\)/', $club_tag, $matches);
-    $number_freddos = $matches[1];
+	foreach ($doc->getElementsByTagName('h3') as $heading){
+		$club_tag = $heading->nodeValue;
+		preg_match('/\((\d+)\)/', $club_tag, $matches);
+		$number_freddos += $matches[1];
+	}
     $pounds = number_format($number_freddos * 0.3, 2);
 ?>
     <head>
