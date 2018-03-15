@@ -3,11 +3,11 @@
     $page = file_get_contents('https://southamptonsummer.ssago.org/');
     $doc = new DOMDocument();
     $doc->loadHTML($page);
-	foreach ($doc->getElementsByTagName('h3') as $heading){
-		$club_tag = $heading->nodeValue;
-		preg_match('/\((\d+)\)/', $club_tag, $matches);
-		$number_freddos += $matches[1];
-	}
+    foreach ($doc->getElementsByTagName('h3') as $heading){
+        $club_tag = $heading->nodeValue;
+        preg_match('/\((\d+)\)/', $club_tag, $matches);
+        $number_freddos += $matches[1];
+    }
     $pounds = number_format($number_freddos * 0.3, 2);
 ?>
     <head>
@@ -57,8 +57,8 @@
                     Bodies.rectangle(-offset, window.innerHeight/2, 50.5, window.innerHeight + 0.5 + 2 * offset, options)
                 ]);
 
-				// Create all the freddos
-				// TODO: Randomise Freddo creation
+                // Create all the freddos
+                // TODO: Randomise Freddo creation
                 var stack = Composites.stack(20, 20, <?=$number_freddos?>, 1,  0, 0, function(x, y) {
                     return Bodies.rectangle(x, y, 66, 160, {
                         force: {x: 0.4, y: -0.1},
@@ -71,19 +71,19 @@
                     });
                 });
 
-				// Add the freddos to the world
+                // Add the freddos to the world
                 World.add(world, stack);
 
-				// Make freddos draggable
+                // Make freddos draggable
                 var mouseConstraint = MouseConstraint.create(engine);
                 World.add(engine.world, mouseConstraint);
 
-				// Make canvas
+                // Make canvas
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
-				
-				// Resize canvase
-				// TODO: Resize boundary
+                
+                // Resize canvase
+                // TODO: Resize boundary
                 window.addEventListener("resize", function(){
                     canvas.width = window.innerWidth;
                     canvas.height = window.innerHeight;
