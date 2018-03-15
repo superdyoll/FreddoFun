@@ -9,6 +9,8 @@ Composite = Matter.Composite,
 Constraint = Matter.Constraint,
 MouseConstraint = Matter.MouseConstraint;
 
+var number_freddos = document.currentScript.getAttribute('freddos')
+
 window.onload = function() {
 	var canvas = document.getElementById('canvas');
 
@@ -42,7 +44,7 @@ window.onload = function() {
 
 	// Create all the freddos
 	// TODO: Randomise Freddo creation
-	var stack = Composites.stack(20, 20, <?=$number_freddos?>, 1,  0, 0, function(x, y) {
+	var stack = Composites.stack(20, 20, number_freddos, 1,  0, 0, function(x, y) {
 		return Bodies.rectangle(x, y, 66, 160, {
 			force: {x: 0.4, y: -0.1},
 			render: {
