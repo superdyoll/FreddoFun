@@ -46,7 +46,7 @@ window.onload = function() {
 	// TODO: Randomise Freddo creation
 	var stack = Composites.stack(20, 20, number_freddos, 1,  0, 0, function(x, y) {
 		return Bodies.rectangle(x, y, 66, 160, {
-			force: {x: 0.4, y: -0.1},
+			force: {x: Math.random(), y: -Math.random()},
 			render: {
 				strokeStyle: '#ffffff',
 				sprite: {
