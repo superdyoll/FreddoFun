@@ -36,13 +36,14 @@ window.onload = function() {
     };
 
     world.bodies = [];
+	size_boxes = 50.5;
 
     // these static walls will not be rendered in this sprites example, see options
     World.add(world, [
-        Bodies.rectangle(window.innerWidth/2, -offset, window.innerWidth + 0.5 + 2 * offset, 50.5, options),
-        Bodies.rectangle(window.innerWidth/2, window.innerHeight + offset, window.innerWidth + 0.5 + 2 * offset, 50.5, options),
-        Bodies.rectangle(window.innerWidth + offset, window.innerHeight/2, 50.5, window.innerHeight + 0.5 + 2 * offset, options),
-        Bodies.rectangle(-offset, window.innerHeight/2, 50.5, window.innerHeight + 0.5 + 2 * offset, options)
+        Bodies.rectangle(window.innerWidth/2, -offset, window.innerWidth + 0.5 + 2 * offset, size_boxes, options),
+        Bodies.rectangle(window.innerWidth/2, window.innerHeight + offset, window.innerWidth + 0.5 + 2 * offset, size_boxes, options),
+        Bodies.rectangle(window.innerWidth + offset, window.innerHeight/2, size_boxes, window.innerHeight + 0.5 + 2 * offset, options),
+        Bodies.rectangle(-offset, window.innerHeight/2, size_boxes, window.innerHeight + 0.5 + 2 * offset, options)
     ]);
 
     // Create all the freddos
