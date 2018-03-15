@@ -29,7 +29,10 @@ window.onload = function() {
 	// Add bodies
 	var offset = 10,
 		options = {
-			isStatic: true
+			isStatic: true,
+			render: {
+				fillStyle: '#ffcc00'
+			}
 	};
 
 	world.bodies = [];
