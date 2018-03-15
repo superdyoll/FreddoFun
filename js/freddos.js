@@ -31,7 +31,7 @@ window.onload = function() {
         options = {
             isStatic: true,
             render: {
-                fillStyle: '#ffcc00'
+                fillStyle: '#660000'
             }
     };
 

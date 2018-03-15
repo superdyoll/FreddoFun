@@ -41,7 +41,7 @@
                     <h1 id="money">&pound;<?=$pounds?></h1>
                     <br />
                     <br />
-                    <h4>Want more freddos to play with here <span style="color:darkgreen; font-weight:bold;">AND</span> one to eat in real life?</h4>
+                    <h4>Want more freddos to play with here <span style="color:#ffb900; font-weight:bold;">AND</span> one to eat in real life?</h4>
                     <p>Fill in the form now at <b>southamptonsummer.ssago.org</b> before the end of March</p>
                 </div>
             </div>
