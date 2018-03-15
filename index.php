@@ -39,8 +39,9 @@
                     <h2>Amount Jake has to spend on freddos</h2>
                     <p>Assuming the price of a freddo is 30p</p>
                     <h1 id="money">&pound;<?=$pounds?></h1>
-                    
-                    <h4>Want more freddos to play with here and one to eat in real life?</h4>
+                    <br />
+					<br />
+                    <h4>Want more freddos to play with here AND one to eat in real life?</h4>
                     <p>Fill in the form now at southamptonsummer.ssago.org</p>
                 </div>
             </div>
