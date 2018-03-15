@@ -36,7 +36,7 @@ window.onload = function() {
     };
 
     world.bodies = [];
-	size_boxes = 50.5;
+    size_boxes = 20;
 
     // these static walls will not be rendered in this sprites example, see options
     World.add(world, [
