@@ -40,8 +40,8 @@
                     <p>Assuming the price of a freddo is 30p</p>
                     <h1 id="money">&pound;<?=$pounds?></h1>
 					
-					<p>Want more freddos?</p>
-					<a href="https://southamptonsummer.ssago.org/" class="btn btn-success">Fill in the form now!</a>
+					<h4>Want more freddos?</h4>
+					<p>Fill in the form now at southamptonsummer.ssago.org</p>
                 </div>
             </div>
         </div>
