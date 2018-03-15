@@ -9,7 +9,7 @@
     $pounds = number_format($number_freddos * 0.3, 2);
 ?>
 <head>
-	<title>Jakes Freddo Counter</title>
+	<title>Jake's Freddo Counter</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="matter.js" type="text/javascript"></script>
 	<script>
