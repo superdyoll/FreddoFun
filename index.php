@@ -29,7 +29,6 @@
             window.onload = function() {
                 var canvas = document.getElementById('canvas');
 
-
                 var engine = Engine.create(),
                 world = engine.world;
 
@@ -42,7 +41,7 @@
                     }
                 });
 
-                // add bodies
+                // Add bodies
                 var offset = 10,
                     options = {
                         isStatic: true
@@ -58,6 +57,8 @@
                     Bodies.rectangle(-offset, window.innerHeight/2, 50.5, window.innerHeight + 0.5 + 2 * offset, options)
                 ]);
 
+				// Create all the freddos
+				// TODO: Randomise Freddo creation
                 var stack = Composites.stack(20, 20, <?=$number_freddos?>, 1,  0, 0, function(x, y) {
                     return Bodies.rectangle(x, y, 66, 160, {
                         force: {x: 0.4, y: -0.1},
@@ -70,14 +71,19 @@
                     });
                 });
 
+				// Add the freddos to the world
                 World.add(world, stack);
 
+				// Make freddos draggable
                 var mouseConstraint = MouseConstraint.create(engine);
-
                 World.add(engine.world, mouseConstraint);
 
+				// Make canvas
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
+				
+				// Resize canvase
+				// TODO: Resize boundary
                 window.addEventListener("resize", function(){
                     canvas.width = window.innerWidth;
                     canvas.height = window.innerHeight;
@@ -85,9 +91,7 @@
 
                 // run the engine
                 Engine.run(engine);
-
                 Render.run(render);
-
             };
         </script>
         <style>
